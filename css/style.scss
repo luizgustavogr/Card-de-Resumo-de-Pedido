@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+$pale_blue: hsl(225, 100%, 94%);
+$brightblue: hsl(245, 75%, 52%);
+$darkblue: hsl(223, 47%, 23%);
+
+body{
+    background-color: hsl(225, 100%, 98%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+main{
+    background-color: white;
+    max-width: 416px;
+    border-radius: 1rem;
+}
+
+main section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem; /*para descolar da borda (0 na vertical e 2rem na horizontal)*/
+    height: 100%;
+    width: 100%;
+}
+
+main section h1{
+    margin-top: 2rem; /*espaçar da imagem*/
+    margin-bottom: 1rem; /*espaçar do texto abaixo dele*/
+    color: $darkblue;
+}
+
+main section span{
+    color: hsl(224, 23%, 55%);
+    text-align: center;
+    font-size: 16px;
+}
+
+main img{
+    width: 100%; /*ocupou toda a largura do seu "pai", que no caso é o main*/
+    border-radius: 1rem 1rem 0 0; /*arrendondou apenas as duas pontas de cima da imagem*/
+}
+
+main .informations{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 0.8rem;
+    padding: 1.5rem 1rem;
+    margin: 2rem 0; /*2rem = margin=top: 2rem + margin-bottom:2rem + margin rigtht e left 0rem*/
+}
+
+main .informations .music-price{
+    display: flex;
+    align-items: center;
+}
+
+main .informations .price{
+    display: flex;
+    flex-direction: column;
+}
+
+main .informations img{
+    width: 40px;
+    margin-right: 1rem;
+}
+
+main .informations a{
+    color: $brightblue;
+    font-weight: 600;
+    font-size: 90%;
+    transition: all 0.3s; /*para a transição pro hover nao ficar muito "bruta"*/
+}
+
+main .informations a:hover{
+    color: $darkblue;
+    text-decoration: none;
+}
+
+main button{
+    cursor: pointer; /*pra mudar o cursor do mouse para a "maozinha" na hora de clicar*/
+    background: $brightblue;
+    color: #FFF;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    padding: 1rem 0; /*comando que fez o botão ficar mais alto, pois aumentou o padding verticalmente*/
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem; /*comando para espaçar o botão do link "cancel order"*/
+    box-shadow: 0px 20px 20px rgba(56,42,225, 0.2); /*efeito da sombra*/
+    /*Explicando o efeito da sombra
+    0px: o quanto a sombra vai se deslocar no eixo x
+    20px: o quanto ela vai se deslocar no eixo y
+    20px: o desfoque, como se fosse o sombreado
+    56,42,225: cor
+    0.2: opacidade da cor 
+    */
+
+}
+
+main button:hover{
+    background-color: #766CF1;
+    transition: all 0.3s;
+}
+
+#cancel-order{
+    text-decoration: none;
+    color: hsl(224, 23%, 55%);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+#cancel-order:hover{
+    color: $darkblue;
+    transition: all 0.3s;
+}
